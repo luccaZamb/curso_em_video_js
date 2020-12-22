@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍS</title>
+</head>
+<body>
+    <h1>País de origem</h1>
+    Digite seu país de origem <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Registrar" onclick="registrar()">
+    <div id="res"></div>
+    <script>
+        function registrar() {
+            var txtp = document.getElementById('txtpais')
+            var res = document.getElementById('res')
+            var origem = txtp.value
+            res.innerHTML = `<p>Seu país de origem é <strong>${origem}</strong></p>`
+            if (origem != 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>Estrangeiro!</strong> Por gentileza se retire :)</p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Brasileiro!</strong> Bora tomar uma breja!</p>'
+            }
+            res.innerHTML += '<p>Brincadeiras a parte, tenha um bom dia!</p>'
+        }
+    </script>
+</body>
+</html>
